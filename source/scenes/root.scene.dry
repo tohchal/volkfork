@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Volkspartei: An Alternate History
+= VolkFork just for my testing 
 
 @start_menu_2
 
@@ -40,7 +40,7 @@ Q.old_demographics = 0;
 Q.use_decimals = 0;
 
 // party resources
-Q.resources = 2;
+Q.resources = 100;
 // party dues
 Q.dues = 2;
 
