@@ -1,4 +1,4 @@
-title: Negotiations with Smaller Parties
+title: Negotiations with all kinds of Parties
 new-page: true
 is-card: true
 card-image: img/ballot.jpg
@@ -6,14 +6,11 @@ view-if: negotiation_others_timer = 0 and (wp_exist or dbp_exist or cnblp_exist 
 on-arrival: negotiation_others_timer = 6
 tags: parliamentary_affairs
 
-= Negotiations with Smaller Parties
+= Negotiations with all kinds of  Parties
 
-We work closely with the plethora of smaller bourgeois parties. Which should we attempt to negotiate with now?
+We work closely with the plethora of other parties. Which should we attempt to negotiate with now?
 
-- @negotiation_wp
-- @negotiation_dbp
-- @negotiation_cnblp
-- @negotiation_vrp
+
 - @negotiation_kvp
 - @negotiation_dnf
 - @negotiation_aspd
@@ -23,5 +20,9 @@ We work closely with the plethora of smaller bourgeois parties. Which should we 
 - @negotiation_vnr
 - @negotiation_csvd
 - @negotiation_dnvp
+- @negotiation_wp
+- @negotiation_dbp
+- @negotiation_cnblp
+- @negotiation_vrp
 - @root: Perhaps we can discuss this at a later time.
 - @easy_discard
