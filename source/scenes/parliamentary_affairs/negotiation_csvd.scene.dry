@@ -1,0 +1,56 @@
+title: Negotiate with the <span style="color: #000000;">**CSVd**</span>.
+face-image: img/csvd.jpg
+new-page: true
+view-if: csvd_exist
+
+= Negotiations with the <span style="color: #000000;">**CSVd**</span>
+
+The <span style="color: #000000;">**CSVd**</span> is a Christian social service organization. How should we approach them?
+
+- @csvd_charity: Support Christian charity programs.
+- @csvd_build_support: We must build more support for this merger.
+- @convince_csvd: We can convince the <span style="color: #000000;">**CSVd**</span> to join our ranks!
+- @go_to_negotiation_others: Actually, we wish to negotiate with some other party.
+
+@go_to_negotiation_others
+on-arrival: negotiation_others_timer = 0
+go-to: negotiation_others
+
+@csvd_build_support
+view-if: nfvp_formed and christian_socials_dvp
+on-arrival: csvd_relation += 3; progressive_dissent += 2;
+
+We are pushing forward proposals for a merger of Christian service organizations into our party.
+
+@csvd_charity
+subtitle: -1 budget - Fund Christian charitable organizations.
+unavailable-subtitle: [? if budget < 1 : Requires 1 budget. ?][? if interior_minister_party != dvp_name: The <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> does not have the Interior Ministry ?]
+choose-if: interior_minister_party = dvp_name and budget >= 1
+
+@convince_csvd
+view-if: nfvp_formed and christian_socials_dvp
+unavailable-subtitle: [? if csvd_relation < 60: Our relations with <span style="color: #000000;">**CSVd**</span> are not good enough. ?][? if not csvd_charity: <span style="color: #000000;">**CSVd**</span> wants us to support charity programs first. ?]
+choose-if: csvd_relation >= 60 and csvd_charity
+on-arrival: {!
+Q.csvd_exist = 0;
+Q.christian_socials_dvp = 1;
+Q.csvd_dvp = 1;
+
+Q.peoples_conservative_strength += 3;
+Q.special_interest_strength += 2;
+
+Q.catholics_dvp += Q.catholics_csvd;
+Q.catholics_csvd = 0;
+Q.rural_dvp += Q.rural_csvd;
+Q.rural_csvd = 0;
+
+Q.dvp_r = parseFloat((Q.dvp_r + Q.csvd_r).toFixed(1));
+Q.csvd_r = 0;
+
+Q.dvp_pl = parseFloat((Q.dvp_pl + Q.csvd_pl).toFixed(1));
+Q.csvd_pl = 0;
+Q.dvp_bl = parseFloat((Q.dvp_bl + Q.csvd_bl).toFixed(1));
+Q.csvd_bl = 0;
+!}
+
+We have convinced the <span style="color: #000000;">**Christian Social People's Service**</span> to merge with our party.

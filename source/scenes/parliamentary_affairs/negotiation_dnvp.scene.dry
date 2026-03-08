@@ -1,0 +1,70 @@
+title: Negotiate with the <span style="color: #3F7BC1;">**DNVP**</span>.
+face-image: img/dnvp.jpg
+new-page: true
+view-if: dnvp_exist
+
+= Negotiations with the <span style="color: #3F7BC1;">**DNVP**</span>
+
+The <span style="color: #3F7BC1;">**DNVP**</span> is a major nationalist party. A merger would be historic but challenging. How should we approach them?
+
+- @dnvp_conservative_alliance: Form a conservative alliance.
+- @dnvp_build_support: We must build more support for this merger.
+- @convince_dnvp: We can convince the <span style="color: #3F7BC1;">**DNVP**</span> to join our ranks!
+- @go_to_negotiation_others: Actually, we wish to negotiate with some other party.
+
+@go_to_negotiation_others
+on-arrival: negotiation_others_timer = 0
+go-to: negotiation_others
+
+@dnvp_build_support
+view-if: nfvp_formed and peoples_conservatives_dvp and nationalists_dvp
+on-arrival: dnvp_relation += 2; liberal_dissent += 8; progressive_dissent += 8;
+
+We are pushing forward proposals for a historic merger of nationalist organizations into our party.
+
+@dnvp_conservative_alliance
+subtitle: -2 budget - Form a broad conservative alliance.
+unavailable-subtitle: [? if budget < 2 : Requires 2 budget. ?][? if chancellor_party != dvp_name: The <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> does not lead the government ?]
+choose-if: chancellor_party = dvp_name and budget >= 2
+
+@convince_dnvp
+view-if: nfvp_formed and peoples_conservatives_dvp and nationalists_dvp
+unavailable-subtitle: [? if dnvp_relation < 80: Our relations with <span style="color: #3F7BC1;">**DNVP**</span> are not good enough. ?][? if not dnvp_conservative_alliance: <span style="color: #3F7BC1;">**DNVP**</span> wants us to form a conservative alliance first. ?]
+choose-if: dnvp_relation >= 80 and dnvp_conservative_alliance
+on-arrival: {!
+Q.dnvp_exist = 0;
+Q.nationalists_dvp = 1;
+Q.peoples_conservatives_dvp = 1;
+Q.dnvp_dvp = 1;
+
+Q.nationalist_strength += 15;
+Q.peoples_conservative_strength += 15;
+Q.industrialist_strength += 10;
+
+Q.new_middle_dvp += Q.new_middle_dnvp;
+Q.new_middle_dnvp = 0;
+Q.old_middle_dvp += Q.old_middle_dnvp;
+Q.old_middle_dnvp = 0;
+Q.rural_dvp += Q.rural_dnvp;
+Q.rural_dnvp = 0;
+Q.catholics_dvp += Q.catholics_dnvp;
+Q.catholics_dnvp = 0;
+
+Q.dvp_r = parseFloat((Q.dvp_r + Q.dnvp_r).toFixed(1));
+Q.dnvp_r = 0;
+
+Q.dvp_pl = parseFloat((Q.dvp_pl + Q.dnvp_pl).toFixed(1));
+Q.dnvp_pl = 0;
+Q.dvp_hb = parseFloat((Q.dvp_hb + Q.dnvp_hb).toFixed(1));
+Q.dnvp_hb = 0;
+Q.dvp_bl = parseFloat((Q.dvp_bl + Q.dnvp_bl).toFixed(1));
+Q.dnvp_bl = 0;
+Q.dvp_wl = parseFloat((Q.dvp_wl + Q.dnvp_wl).toFixed(1));
+Q.dnvp_wl = 0;
+Q.dvp_sl = parseFloat((Q.dvp_sl + Q.dnvp_sl).toFixed(1));
+Q.dnvp_sl = 0;
+Q.dvp_al = parseFloat((Q.dvp_al + Q.dnvp_al).toFixed(1));
+Q.dnvp_al = 0;
+!}
+
+We have convinced the <span style="color: #3F7BC1;">**German National People's Party**</span> to merge with our party. This is a monumental achievement for German conservatism!
