@@ -20,9 +20,9 @@ We work closely with the plethora of other parties. Which should we attempt to n
 - @negotiation_vnr
 - @negotiation_csvd
 - @negotiation_dnvp
-- @negotiation_wp
 - @negotiation_dbp
 - @negotiation_cnblp
 - @negotiation_vrp
+- @negotiation_wp
 - @root: Perhaps we can discuss this at a later time.
 - @easy_discard
