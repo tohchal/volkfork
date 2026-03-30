@@ -67,7 +67,9 @@ on-arrival: nfvp_peoples_conservatives_success = 1
 
 trevvy will join us. the christian socials too. wholesome
 
-- @nfvp_spd_negotiation: Negotiate with <span style="color: #ff0000;">SPD right</span>.
+- @nfvp_spd_inte_negotiation: Negotiate with <span style="color: #ff0000;">SPD right</span>.
+
+@nfvp_spd_inte_negotiation
 
 Now Stresemann will negotiate with <span style="color: #ff0000;">SPD right</span> faction of <span style="color: #ff0000;">**SDP**</span>.
 
@@ -85,7 +87,9 @@ on-arrival: nfvp_spd_inte_success = 1
 
 SPD will join us. the democratic socials too. wholesome double!
 
-- @nfvp_zentrum_negotiation: Negotiate with <span style="color: #000000;">Zentrum Left</span>.
+- @nfvp_zentrum_inte_negotiation: Negotiate with <span style="color: #000000;">Zentrum Left</span>.
+
+@nfvp_zentrum_inte_negotiation
 
 Now Stresemann will negotiate with <span style="color: #000000;">Zentrum Left</span> faction of <span style="color: #000000;">**Z**</span>.
 
