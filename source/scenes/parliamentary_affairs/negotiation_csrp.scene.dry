@@ -64,6 +64,7 @@ if (Q.nfvp_csrp_inte_success) {
     Q.catholics_dvp += (Q.catholics_csrp*0.1);
     Q.catholics_csrp*=0.9;
   }
+  }
 
 Q.dvp_r = parseFloat((Q.dvp_r + Q.csrp_r).toFixed(1));
 Q.csrp_r = 0;

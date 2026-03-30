@@ -58,6 +58,7 @@ if (Q.nfvp_kvp_inte_success) {
     Q.catholics_dvp += (Q.catholics_kvp*0.1);
     Q.catholics_kvp*=0.9;
   }
+  }
 
 Q.dvp_r = parseFloat((Q.dvp_r + Q.kvp_r).toFixed(1));
 Q.kvp_r = 0;

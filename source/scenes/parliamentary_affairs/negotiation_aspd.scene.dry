@@ -67,6 +67,7 @@ if (Q.nfvp_aspd_inte_success) {
     Q.catholics_dvp += (Q.catholics_aspd*0.1);
     Q.catholics_aspd*=0.9;
   }
+  }
 
 Q.dvp_r = parseFloat((Q.dvp_r + Q.aspd_r).toFixed(1));
 Q.aspd_r = 0;
