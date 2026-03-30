@@ -61,8 +61,16 @@ Q.dvp_pl = parseFloat((Q.dvp_pl + Q.aspd_pl).toFixed(1));
 Q.aspd_pl = 0;
 Q.dvp_hb = parseFloat((Q.dvp_hb + Q.aspd_hb).toFixed(1));
 Q.aspd_hb = 0;
+Q.dvp_bl = parseFloat((Q.dvp_bl + Q.aspd_bl).toFixed(1));
+Q.aspd_bl = 0;
+Q.dvp_wl = parseFloat((Q.dvp_wl + Q.aspd_wl).toFixed(1));
+Q.aspd_wl = 0;
 Q.dvp_sl = parseFloat((Q.dvp_sl + Q.aspd_sl).toFixed(1));
 Q.aspd_sl = 0;
+Q.dvp_hl = parseFloat((Q.dvp_hl + Q.aspd_hl).toFixed(1));
+Q.aspd_hl = 0;
+Q.dvp_al = parseFloat((Q.dvp_al + Q.aspd_al).toFixed(1));
+Q.aspd_al = 0;
 !}
 
 We have convinced the <span style="color: #E3000F;">**Old Social Democratic Party**</span> to merge with our party.
