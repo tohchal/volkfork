@@ -39,10 +39,31 @@ Q.csrp_dvp = 1;
 Q.peoples_conservative_strength += 4;
 Q.special_interest_strength += 3;
 
-Q.catholics_dvp += Q.catholics_csrp;
-Q.catholics_csrp = 0;
-Q.rural_dvp += Q.rural_csrp;
-Q.rural_csrp = 0;
+if (Q.nfvp_csrp_inte_success) {
+  if (Q.workers_csrp > 0) {
+    Q.workers_dvp += (Q.workers_csrp*0.4);
+    Q.workers_csrp*=0.6;
+  }
+  if (Q.unemployed_csrp > 0) {
+    Q.unemployed_dvp += (Q.unemployed_csrp*0.4);
+    Q.unemployed_csrp*=0.6;
+  }
+  if (Q.new_middle_csrp > 0) {
+    Q.new_middle_dvp += (Q.new_middle_csrp*0.2);
+    Q.new_middle_csrp*=0.8;
+  }
+  if (Q.old_middle_csrp > 0) {
+    Q.old_middle_dvp += (Q.old_middle_csrp*0.2);
+    Q.old_middle_csrp*=0.8;
+  }
+  if (Q.rural_csrp > 0) {
+    Q.rural_dvp += (Q.rural_csrp*0.15);
+    Q.rural_csrp*=0.85;
+  }
+  if (Q.catholics_csrp > 0) {
+    Q.catholics_dvp += (Q.catholics_csrp*0.1);
+    Q.catholics_csrp*=0.9;
+  }
 
 Q.dvp_r = parseFloat((Q.dvp_r + Q.csrp_r).toFixed(1));
 Q.csrp_r = 0;
