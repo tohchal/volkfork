@@ -24,8 +24,8 @@ We are pushing forward proposals for a merger of Christian social organizations 
 
 @csrp_social_welfare
 subtitle: -1 budget - Expand Christian social welfare programs.
-unavailable-subtitle: [? if budget < 1 : Requires 1 budget. ?][? if interior_minister_party != dvp_name: The <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> does not have the Interior Ministry ?]
-choose-if: interior_minister_party = dvp_name and budget >= 1
+unavailable-subtitle: [? if budget < 1 : Requires 1 budget. ?][? if finance_minister_party != dvp_name: The <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> does not have the finance Ministry ?]
+choose-if: finance_minister_party = dvp_name and budget >= 1
 
 @convince_csrp
 view-if: nfvp_formed and christian_socials_dvp

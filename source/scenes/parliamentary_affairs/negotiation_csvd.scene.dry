@@ -1,7 +1,7 @@
 title: Negotiate with the <span style="color: #000000;">**CSVd**</span>.
 face-image: img/csvd.jpg
 new-page: true
-view-if: csvd_exist
+view-if: csvd_exists
 
 = Negotiations with the <span style="color: #000000;">**CSVd**</span>
 
@@ -26,6 +26,8 @@ We are pushing forward proposals for a merger of Christian service organizations
 subtitle: -1 budget - Fund Christian charitable organizations.
 unavailable-subtitle: [? if budget < 1 : Requires 1 budget. ?][? if interior_minister_party != dvp_name: The <span style="color: var(--dvp-color);">**[+ dvp_name +]**</span> does not have the Interior Ministry ?]
 choose-if: interior_minister_party = dvp_name and budget >= 1
+on-arrival: {!
+csvd_charity = 1
 
 @convince_csvd
 view-if: nfvp_formed and christian_socials_dvp
