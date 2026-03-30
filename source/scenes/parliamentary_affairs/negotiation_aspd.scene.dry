@@ -28,6 +28,7 @@ unavailable-subtitle: [? if labor_minister_party != dvp_name: The <span style="c
 choose-if: labor_minister_party = dvp_name
 on-arrival: {!
 aspd_labor_law = 1
+!}
 
 @convince_aspd
 view-if: nfvp_formed or lvp_formed
